@@ -1,0 +1,125 @@
+<ion-header>
+
+    <ion-toolbar color="primary">
+
+        <ion-buttons slot="start">
+            <ion-button (click)="mostrarMenu()">
+                <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+
+            </ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end">
+            <ion-avatar>
+
+
+            </ion-avatar>
+        </ion-buttons>
+
+        <ion-title class="ion-text-center">Inicio</ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+    <br>
+
+    <ion-card-title id="titulob"> Bienvenid@ </ion-card-title>
+
+    <br>
+
+
+    <table style="text-align: center; width: 100%;">
+        <tr style="text-align: center;">
+            <td>
+                <strong>
+                    <label for="usuarioSession" id="usuarioSession"></label>
+                </strong>
+
+            </td>
+        </tr>
+    </table>
+
+
+    <ion-card-header>
+
+
+        <ion-card-title id="tituloinicial"> Nuestros Servicios </ion-card-title>
+
+        <!--<ion-card-subtitle id="frase">QUEREMOS DIFERENCIARNOS CON UN SELLO ÚNICO</ion-card-subtitle>-->
+    </ion-card-header>
+    <ion-slides [options]="option" class="ion-margin-top">
+
+
+        <ion-slide>
+            <ion-card>
+                <img src="/assets/icon/aceite.png">
+            </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-card>
+                <img src="/assets/icon/mantencion.png">
+            </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-card>
+                <img src="/assets/icon/cerrajero.png">
+            </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-card>
+                <img src="/assets/icon/pintura.png">
+            </ion-card>
+        </ion-slide>
+
+
+
+        <ion-slide>
+            <ion-card>
+                <img src="/assets/icon/carwash.png">
+            </ion-card>
+        </ion-slide>
+
+
+    </ion-slides>
+
+
+
+
+</ion-content>
+
+
+
+
+
+
+
+<ion-list>
+    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirecTo" detail="true">
+        <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+        {{c.name}}
+    </ion-item>
+</ion-list>
+
+
+<div id="footer">
+    <a href="https://www.whatsapp.com" target="_blank">
+        <ion-icon style="font-size: 24px;" color="success" name="logo-whatsapp"></ion-icon>
+    </a>
+    <a href="https://twitter.com" target="_blank">
+        <ion-icon style="font-size: 24px;" color="secondary" name="logo-twitter"></ion-icon>
+    </a>
+    <a href="https://es-la.facebook.com" target="_blank">
+        <ion-icon style="font-size: 24px;" color="secondary" name="logo-facebook"></ion-icon>
+    </a>
+    <a href="https://www.youtube.com" target="_blank">
+        <ion-icon style="font-size: 24px;" color="tertiary" name="logo-youtube"></ion-icon>
+    </a>
+
+</div>

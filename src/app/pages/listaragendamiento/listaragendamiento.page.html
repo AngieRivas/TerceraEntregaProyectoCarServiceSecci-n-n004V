@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="mostrarMenu()">
+                <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Reservas</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list #myList>
+        <ion-list-header>
+            <ion-label class="ion-text-center">Listado de Agendamiento</ion-label>
+        </ion-list-header>
+
+        <ion-list>
+            <ion-item-sliding *ngFor="let agendamiento of agendar">
+                <ion-item>
+                    <ion-label text-wrap>
+                        <h3>Patente : {{agendamiento.patente}}</h3>
+                        <ion-text color="blank">
+                            <p>Tipo Servicio : {{agendamiento.tipo}}</p>
+                            <p> Hora : {{agendamiento.hora}}</p>
+                            <p> Fecha : {{agendamiento.fecha}}</p>
+
+                        </ion-text>
+                    </ion-label>
+                </ion-item>
+                <ion-item-options side="end">
+                    <ion-item-option color="secondary" (click)="updateAgen(agendamiento)">Actualizar</ion-item-option>
+                    <ion-item-option color="danger" (click)="deleteAgen(agendamiento)">Eliminar</ion-item-option>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+    </ion-list>
+
+</ion-content>

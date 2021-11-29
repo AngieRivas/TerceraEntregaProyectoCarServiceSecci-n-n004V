@@ -1,0 +1,72 @@
+<ion-header>
+
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/" text="" color="primary" mode="ios"></ion-back-button>
+        </ion-buttons>
+        <ion-title text-center>Quienes Somos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+
+    <ion-card>
+
+        <ion-card-header>
+            <ion-card-title id="tituloquienes">Quienes Somos</ion-card-title>
+
+
+        </ion-card-header>
+
+        <ion-card-content id="presentacion">
+            Somos una pareja de amigos emprendedores.
+            <br> Partimos este proyecto el año 2017, con el sueño de instalarnos en Santiago con nuestro pequeño taller mecánico, específicamente en comuna de Maipú.
+            <br> Al principio decidimos instalarnos en el antejardín de una de nuestras casas, apostando a la gran cantidad de vecinos que reciden en el barrio.
+            <br> El día de hoy tenemos nuestro propio taller mecanico, con mejor ubicación y espacio para nosostros y nuestros clientes.
+            <br> Hasta el momento ha sido todo muy gratificante y emocionante.
+            <br>
+            <br>
+            <div id="gracias"> ¡Gracias por visitarnos!</div>
+
+
+
+        </ion-card-content>
+    </ion-card>
+
+
+
+
+
+    <ion-list>
+        <ion-item *ngFor="let c of componentes" [routerLink]="c.redirecTo" detail="true">
+            <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+            {{c.name}}
+        </ion-item>
+    </ion-list>
+
+
+
+    <div id="footer">
+        <a href="https://www.whatsapp.com" target="_blank">
+            <ion-icon style="font-size: 24px;" color="success" name="logo-whatsapp"></ion-icon>
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <ion-icon style="font-size: 24px;" color="secondary" name="logo-twitter"></ion-icon>
+        </a>
+        <a href="https://es-la.facebook.com" target="_blank">
+            <ion-icon style="font-size: 24px;" color="secondary" name="logo-facebook"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+            <ion-icon style="font-size: 24px;" color="tertiary" name="logo-youtube"></ion-icon>
+        </a>
+
+    </div>
+
+
+    <!--
+   <ion-button routerLink="/alert">Alert</ion-button>
+   <ion-button routerLink="/action-sheet">Action Sheet</ion-button>-->
+
+
+</ion-content>

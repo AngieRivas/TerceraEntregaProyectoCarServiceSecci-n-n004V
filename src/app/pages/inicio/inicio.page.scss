@@ -1,0 +1,66 @@
+ion-content {
+    background: aqua;
+}
+
+ion-card {
+    background: rgb(247, 248, 250);
+}
+
+#tituloinicial {
+    text-align: center;
+    color: rgb(15, 15, 15);
+    font-size: 20;
+}
+
+#titulob {
+    text-align: center;
+    color: rgb(15, 15, 15);
+    font-size: 12;
+}
+
+#frase {
+    color: rgb(56, 56, 59);
+}
+
+#parrafoinicio {
+    text-align: left;
+    color: rgb(56, 56, 59);
+    font-size: 12px;
+    margin: 12px;
+}
+
+#footer {
+    text-align: center;
+}
+
+#usuarioSession {
+    text-align: center;
+    color: rgb(206, 36, 36);
+    font-size: 20;
+}
+
+ion-card {
+    width: 100%;
+    height: 160px;
+    box-shadow: none;
+    border-radius: 12px;
+    img {
+        object-fit: cover;
+        width: 100%;
+        transform: scale(1.1, 1.1) rotate(1deg);
+        transition: 600ms all ease-in-out;
+    }
+}
+
+.swiper-slide-active {
+    transform: scale(1.05, 1.05);
+    ion-card {
+        img {
+            transform: scale(1, 1);
+        }
+    }
+}
+
+.swiper-slide {
+    transition: 400ms all ease-in-out;
+}
